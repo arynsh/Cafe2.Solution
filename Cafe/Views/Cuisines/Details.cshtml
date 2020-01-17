@@ -10,7 +10,7 @@
 <h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h3>
 
 
-@* @if (@Model.Restaurants.Count == 0)
+ @if (@Model.Restaurants.Count == 0)
 {
   <p>no restaurants found</p>
 } 
@@ -18,9 +18,9 @@
 <ul>
 @foreach (Restaurant restaurant in @Model.Restaurants)
 {
-   <li>Description: @restaurant.Name</li>
+   <li>Restaurant: @restaurant.Name</li>
 }
-</ul> *@
+</ul>
 
 @* <ul>
 @foreach(Item item in @ViewBag.itemList)

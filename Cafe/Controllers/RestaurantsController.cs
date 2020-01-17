@@ -38,7 +38,8 @@ namespace Cafe.Controllers
 
     public ActionResult Details(int id)
     {
-      Restaurant thisRestaurant = _db.Restaurants.FirstOrDefault(restaurants => restaurants.RestaurantId == id);
+      // Restaurant thisRestaurant = _db.Restaurants.Where(restaurant => restaurant.Rating == rating);
+      Restaurant thisRestaurant = _db.Restaurants.FirstOrDefault(restaurant => restaurant.RestaurantId == id);
       return View(thisRestaurant);
     }
 

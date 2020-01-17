@@ -37,7 +37,7 @@ namespace Cafe.Controllers
     public ActionResult Details(int id)
     {
       Cuisine thisCuisine = _db.Cuisines.FirstOrDefault(cuisine => cuisine.CuisineId == id);
-    //   ViewBag.restaurantList = thisCuisine.Restaurants;  // We changed this line
+      thisCuisine.Restaurants = _db.Restaurants.Where(restaurants => restaurants.CuisineId == id).ToList(); //This is the magical line of code!! Inside () means: "restaurants" is looking at each individual item inside the restaurants table and seeing if their CuisineId matches the id passed through the parameter.
       return View(thisCuisine);
     }
 
